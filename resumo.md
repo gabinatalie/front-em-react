@@ -316,3 +316,27 @@ Diferente do array que recebe vários conteúdos dentro de [], o objeto é mais 
 você pode alterar o conteúdo do objeto adicionando nova chave, deletando uma existente, alterando o valor de uma chave que já existe. E consegue também selecionar um atributo especifico dentro de uma chave específica.
 
 sintaxe simplificada adiciona uma variável e uma atributo que tenham o mesmo nome, usando apenas uma vez.
+
+
+## Funções de Alta Ordem ##
+
+*Frist Class Function*
+Quando em uma linguagem de programação a função é tratada como qualquer outra variável
+Por exemplo, uma função pode ser passada como parâmetro para outra função, assim como pode ser retornada por uma função e esse retorno pode ser atribuído a uma variável.
+*High Order Function*
+É uma função que recebe outra função como parâmetro/argumento, ou uma função que retorna outra função.
+
+**Função de Alta Ordem de Array**
+São funções que já existem/estão implementadas dentro do JavaScript, dentro dos arrays.
+São métodos dos arrays, que recebem funções como parametros. Métodos são uma função que está dentro do objeto. 
+Principais:
+-forEach()
+-find()
+-findIndex()
+-every()
+-some()
+-filter() *
+-map() *
+-reduce() *
+
+*as mais usadas

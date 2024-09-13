@@ -317,26 +317,44 @@ você pode alterar o conteúdo do objeto adicionando nova chave, deletando uma e
 
 sintaxe simplificada adiciona uma variável e uma atributo que tenham o mesmo nome, usando apenas uma vez.
 
+## Funções de Alta Ordem
 
-## Funções de Alta Ordem ##
-
-*Frist Class Function*
+_Frist Class Function_
 Quando em uma linguagem de programação a função é tratada como qualquer outra variável
 Por exemplo, uma função pode ser passada como parâmetro para outra função, assim como pode ser retornada por uma função e esse retorno pode ser atribuído a uma variável.
-*High Order Function*
+_High Order Function_
 É uma função que recebe outra função como parâmetro/argumento, ou uma função que retorna outra função.
 
 **Função de Alta Ordem de Array**
 São funções que já existem/estão implementadas dentro do JavaScript, dentro dos arrays.
-São métodos dos arrays, que recebem funções como parametros. Métodos são uma função que está dentro do objeto. 
-Principais:
+São métodos dos arrays, que recebem funções como parametros. Métodos são uma função que está dentro do objeto.
+Principais: exemplos: aula 11 e 12
 -forEach()
 -find()
 -findIndex()
 -every()
 -some()
--filter() *
--map() *
--reduce() *
-
+-filter() _ aula 12
+-map() _ aula 12
+-reduce() * aula 12
 *as mais usadas
+
+## Programação Assíncrona
+
+Na programação existem duas abordagens para processamento de dados:
+-Programação Paralela
+-Programação Assíncrona - JS
+No JS ele usa programação assíncrona para conseguir extrair o máximo possível do hardware, da thread (no processador existem múltiplas threads, vários núcleos de processamento), o JS utiliza do assincronimso dentro dessa thread para lidar com esses dados.
+
+Programação Pararela:
+Vai pegar o código e dividir em multiplos núcleos/threads de processamento, e cada thread vai estar processando uma parte do código de forma simultânea/paralela.
+(Java, C++, Phyton) - programação paralela é bem difícil, pois normalmente o código depende de um passo anterior.
+Por isso vem a PA
+Programação assíncrona:
+ex: no código, você está tentando acessar/ler um arquivo ou diretório, isso leva um certo tempo para acontecer, o JS não fica parado sem realizar outra tarefa enquanto essa leitura acontece. Se não você ficaria com o seu código congelado até finalização daquela ação. O JS continua processando coisas que não dependem dessa leitura até que ela seja finalizada, só então ele retorna nela com o resultado ou o próximo processamento a partir daquela leitura.
+Processamentos que ficam acontecendo em pararelelo, a parte, enquanto o resto do sistema continua rodando/funcionando.
+
+No JS a programação assíncrona pode ser aplicada de três formas:
+-Por callbacks (função/chamada de retorno)
+-Por promises
+-Resolvendo promisses utilizando async/await

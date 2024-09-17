@@ -1,8 +1,8 @@
 # Node.js
 
-É uma tecnologia runtime de código aberto que permite executar JS no lado do servidor (backend), fora do ambiente do navegador. Isso significa que você pode escrever todo o código de uma aplicação web (front e back) usando JS, isso apenas graças ao Node, pois antes JS só era usado para desenvolvimento front. Isso também significa que você pode usar JS para desenvolver a lógica do lado do servidor, manipulação de banco de dados, manipulação de arquivos, criação de APIs, e muito mais.
-Event-Driven: Programação orientada a eventos que melhora a eficiência em aplicações que exigem alta performance, como servidores web.
-Single-Threaded: Embora seja single-threaded, Node.js usa operações assíncronas para realizar tarefas de I/O de forma eficiente.
+*O que é?* É uma tecnologia runtime de código aberto(open-source) que permite a execução de JavaScript (JS) no lado do servidor (backend), fora do navegador. Isso significa que você pode escrever todo o código de uma aplicação web (front e back) usando JS, isso apenas graças ao Node, pois antes JS só era usado para desenvolvimento front. Isso também significa que você pode usar JS para desenvolver a lógica do lado do servidor, manipulação de banco de dados, manipulação de arquivos, criação de APIs, e muito mais.
+*Event-Driven:* Programação orientada a eventos que melhora a eficiência em aplicações que exigem alta performance, como servidores web.
+*Single-Threaded:* Embora seja single-threaded, Node.js usa operações assíncronas para realizar tarefas de I/O de forma eficiente.
 
 # JavaScript
 
@@ -11,7 +11,8 @@ Single-Threaded: Embora seja single-threaded, Node.js usa operações assíncron
 
 _'Console.log'_
 
--É uma função do JS usada para exibir mensagens ou valores no console do navegador ou do ambiente em desenvolvimento.É uma ferramenta muito útil para depuração, pois permite que você veja o que está acontecendo no código enquanto ele é executado.
+-É uma função do JS usada para exibir mensagens ou valores no console do navegador ou do ambiente em desenvolvimento.
+É uma ferramenta muito útil para depuração, pois permite que você veja o que está acontecendo no código enquanto ele é executado.
 -É mais usado durante a fase de desenvolvimento e teste. Em produção, pode ser útil manter o console.log() para logs de depuração, mas você pode considerar bibliotecas de logging mais robustas para ambientes de produção.
 -Não afeta a lógica do código, apenas exibe informações no console. Porém, muitas chamadas a console.log() podem afetar o desempenho e poluir o console, por isso é importante usá-lo com moderação.
 ex:
@@ -209,7 +210,7 @@ _Tipos de Estruturas de Controle de Fluxo:_
 **Estrutura Repetição**:
 Ela permite que um determinado bloco de código seja repetido no fluxo do script e a quantidade de vezes.
 
--- AULA 8 - CONTINUAR RESUMO --
+*aula 08*
 _Laços condicionais (while/do-while)_ são considerados estruturas de repetição não controlada. Não consegue saber quantas vezes ela vai repetir.
 É usada quando você precisa repetir algo até obter a 'resposta' ou 'ação' necessária, mas não consegue saber a quantidade exata.
 
@@ -339,22 +340,45 @@ Principais: exemplos: aula 11 e 12
 -reduce() * aula 12
 *as mais usadas
 
-## Programação Assíncrona
+## Programação Assíncrona - aula 13
 
 Na programação existem duas abordagens para processamento de dados:
 -Programação Paralela
 -Programação Assíncrona - JS
 No JS ele usa programação assíncrona para conseguir extrair o máximo possível do hardware, da thread (no processador existem múltiplas threads, vários núcleos de processamento), o JS utiliza do assincronimso dentro dessa thread para lidar com esses dados.
 
-Programação Pararela:
+*Programação Pararela:*
 Vai pegar o código e dividir em multiplos núcleos/threads de processamento, e cada thread vai estar processando uma parte do código de forma simultânea/paralela.
 (Java, C++, Phyton) - programação paralela é bem difícil, pois normalmente o código depende de um passo anterior.
 Por isso vem a PA
-Programação assíncrona:
+*Programação assíncrona:*
 ex: no código, você está tentando acessar/ler um arquivo ou diretório, isso leva um certo tempo para acontecer, o JS não fica parado sem realizar outra tarefa enquanto essa leitura acontece. Se não você ficaria com o seu código congelado até finalização daquela ação. O JS continua processando coisas que não dependem dessa leitura até que ela seja finalizada, só então ele retorna nela com o resultado ou o próximo processamento a partir daquela leitura.
 Processamentos que ficam acontecendo em pararelelo, a parte, enquanto o resto do sistema continua rodando/funcionando.
 
 No JS a programação assíncrona pode ser aplicada de três formas:
--Por callbacks (função/chamada de retorno)
--Por promises
--Resolvendo promisses utilizando async/await
+
+-Por **callbacks** (função || chamada de retorno):
+Registra uma terafa - vai executando o restante - quando finalizar o processo da tarefa, a função retorna para ela e dá continuidade.
+
+-Por **promises** (promessas):
+Pode ser cumprida ou não. JS cria um objeto que é chamado de promessa, ele pode cumprir ou não, dependendo do que for processado. A promisse é um objeto que guarda uma promessa de que algo será realizado. É útil para os casos em que estamos lidando com operações assíncronas. 
+A promisse estará em algum dos estados abaixo:
+1. Pending: a promisse foi iniciada, mas está pendente
+2.Fullfilled: a promisse foi concretizada com sucesso
+3.Rejected: a promisse foi rejeitada, porque houve um erro.
+Exemplo de utilização: pegar dados do back-end(API)
+
+-Resolvendo promisses utilizando **async/await**:
+demonsta que é assincrono e que vai aguardar ser processado para dar continuidade.
+
+
+Pesquisar biblioteca FS
+Buffer - pesquisar -tipo de dado - conversao
+setTimeout
+
+promisse.then.catch.finally
+
+fetch() - retorna uma promisse
+
+callback e promisses - callback hell
+a forma mais otimizada e mais recomendada, que fica mais limpo e mais fácil de dar manutenção é o async/await e usar o try, catch, finally. 

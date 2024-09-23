@@ -188,3 +188,15 @@ _OPTIONS_: Utilizado para descrever as opções de comunicação que o servidor 
 _HEAD_: Funciona de forma semelhante ao GET, mas a diferença é que ele não retorna o corpo da resposta, apenas os cabeçalhos. Isso é útil para verificar se um recurso existe sem baixar todo o conteúdo.
 _CONNECT_: Utilizado para iniciar uma conexão de túnel com o servidor, geralmente usado em comunicações seguras (como com HTTP).
 _TRACE_: Utilizao para realizar um loop-back de teste, retornando a requisição recebida ao cliente. Isso é útil para fins de diagnóstico, como verificar se os dados da requisição foram modificados no caminho.
+
+# Fetch API - browser API
+
+Só roda, se estiver rodando o JS no browser, não roda do Node.js
+
+Função Fetch = Promisse
+Ou seja, é uma função assíncrona, leva um tempinho para retornar
+
+No fetch() o primeiro parâmetro sempre é a URL da API, mas é possível passar um segundo parâmetro que é um objeto, onde é possível passar um body, um cache, uma header, entre outros. ( shit + espaço mostra as opções)
+
+Fetch por padrão sempre faz uma requisição do tipo GET - para alterar o tipo da requisição, passa no parâmetro do objeto - method
+No body do fetch, não aceita um objeto do JS, aceita apenas STRING.
